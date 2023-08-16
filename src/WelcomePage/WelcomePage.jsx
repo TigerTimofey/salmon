@@ -15,7 +15,7 @@ function WelcomePage() {
           </Badge>{" "}
           Lover
         </p>
-        <img src="./sushiLogo.png" className="App-logo p-3" alt="logo" />
+        <img src="sushiLogo.png" className="App-logo p-3" alt="logo" />
       </div>
 
       <div id="MainMenuProducts">
