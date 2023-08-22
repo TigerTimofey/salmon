@@ -55,7 +55,6 @@ function OrderModal({
               {formData.name} <br />
               <p className="text-success m-0">Number of guests</p>{" "}
               {formData.number} <br />
-              {/* Time:{formData.selectedOption} <br /> */}
               <p className="text-success m-0">Additional information</p>{" "}
               {formData.info} <br />
             </div>
