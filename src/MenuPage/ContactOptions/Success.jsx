@@ -12,7 +12,7 @@ function Success() {
     });
   }, []);
 
-  return <p className="logoFontMedium d-absolute">SUCCESS! THANK YOU!</p>;
+  return <p className="logoFontSmall text-center">SUCCESS!</p>;
 }
 
 export default Success;

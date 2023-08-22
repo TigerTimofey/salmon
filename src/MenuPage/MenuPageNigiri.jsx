@@ -1,41 +1,94 @@
 import Badge from "react-bootstrap/Badge";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-function MenuPageNigiri() {
+import {
+  salmon,
+  salmonSet,
+  salmonPrice,
+  salmonSetPrice,
+  currency,
+} from "../ConstantsMenu";
+
+function MenuPageNigiri({
+  addMenu,
+  showMinus,
+  handleAdd,
+  handleMinusAdd,
+  //
+  addMenuSalmonSet,
+  showMinusSalmonSet,
+  handleAddSalmonSet,
+  handleMinusAddSalmonSet,
+}) {
   return (
-    <>
-      <div className="App-header-white logoFont">
-        <div className="menu-item-1">
-          <h2 className="logoFont">N i g i r i</h2>
+    <div className=" appersCenter menu-item-1">
+      <h2 className="logoFontSmall">Nigiri</h2>
 
-          <img
-            src="./NigiriImages/salmon.png"
-            className="text-slide-left image-height p-3"
-            alt="salmon"
-          />
-          <p className="text-slide-left">
+      <img
+        src="./NigiriImages/salmon.png"
+        className=" image-height p-3"
+        alt="salmon"
+      />
+      <Container>
+        <Row>
+          <Col>
             <Badge bg="dark" text="light">
-              Salmon
+              {salmon}
             </Badge>
             <Badge bg="danger" text="light">
-              2.50$
+              {salmonPrice}
+              {currency}
             </Badge>
-          </p>
-          <img
-            src="./NigiriImages/salmon3.png"
-            className="text-slide-left image-height p-3"
-            alt="salmonset"
-          />
-          <p className="text-slide-left">
+
+            <Button variant="light" size="sm" onClick={handleAdd}>
+              Add{addMenu === null ? "" : `ed: ${addMenu}`}{" "}
+            </Button>
+            {showMinus && (
+              <Button variant="light" size="sm" onClick={handleMinusAdd}>
+                <img src="trash.svg" alt="trash" />
+              </Button>
+            )}
+          </Col>
+        </Row>
+      </Container>
+
+      <img
+        src="./NigiriImages/salmon3.png"
+        className=" image-height p-3"
+        alt="salmonset"
+      />
+
+      <Container>
+        <Row>
+          <Col>
             <Badge bg="dark" text="light">
-              Salmon Set
+              {salmonSet}
             </Badge>
             <Badge bg="danger" text="light">
-              6.50$
+              {salmonSetPrice}
+              {currency}
             </Badge>
-          </p>
-        </div>
-      </div>
-    </>
+
+            <Button variant="light" size="sm" onClick={handleAddSalmonSet}>
+              Add
+              {addMenuSalmonSet === null ? "" : `ed: ${addMenuSalmonSet}`}{" "}
+            </Button>
+            {showMinusSalmonSet && (
+              <Button
+                variant="light"
+                size="sm"
+                onClick={handleMinusAddSalmonSet}
+              >
+                <img src="trash.svg" alt="trash" />
+              </Button>
+            )}
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 

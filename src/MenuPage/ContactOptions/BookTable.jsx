@@ -34,13 +34,7 @@ function BookTable({ selectedOption, setSelectedOption }) {
     <div>
       <Container>
         <Row>
-          <Col>
-            <Calender onSelectDate={handleSelectDate} />
-            <p className="d-grid justify-content-center text-center">
-              {selectedDate.toDateString()}
-            </p>
-          </Col>
-          <Col>
+          <Col xs={6} md={6} className="book-table-padding ">
             <FloatingLabel controlId="floatingSelect" label="Your name">
               <Form.Control
                 type="text"
@@ -67,7 +61,6 @@ function BookTable({ selectedOption, setSelectedOption }) {
               >
                 <Form.Control
                   as="textarea"
-                  rows={3}
                   name="info"
                   value={formData.info}
                   onChange={handleInputChange}
@@ -75,16 +68,24 @@ function BookTable({ selectedOption, setSelectedOption }) {
               </FloatingLabel>
               <br />
             </Form.Group>
-            <OrderModal
-              selectedOption={selectedOption}
-              formData={formData}
-              setFormData={setFormData}
-              setSelectedOption={setSelectedOption}
-              selectedDate={selectedDate}
-            />
           </Col>{" "}
+          <Col xs={6} md={6}>
+            <div className="book-calender-padding">
+              <Calender onSelectDate={handleSelectDate} />
+            </div>
+            <p className="d-grid justify-content-center text-center">
+              {selectedDate.toDateString()}
+            </p>
+          </Col>
         </Row>
       </Container>
+      <OrderModal
+        selectedOption={selectedOption}
+        formData={formData}
+        setFormData={setFormData}
+        setSelectedOption={setSelectedOption}
+        selectedDate={selectedDate}
+      />
     </div>
   );
 }

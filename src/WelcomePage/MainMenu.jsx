@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { Row, Col } from "react-bootstrap";
 
 function MainMenu() {
   const [colorMenu, setColorMenu] = useState("text-white");
@@ -7,33 +8,63 @@ function MainMenu() {
   const handleColorDanger = () => {
     setColorMenu("text-danger");
   };
+  const handleColorWhite = () => {
+    setColorMenu("text-white");
+  };
 
   return (
-    <>
-      <div className="d-flex justify-content-between p-3 fixed-top">
-        <Link to="MainMenuProducts" smooth={true} duration={100}>
-          <h5
-            className={`menu-main logoFontSmall flex-fill ms-5 ${
-              colorMenu === "text-danger" ? "text-danger" : ""
-            }`}
-            onClick={handleColorDanger}
-          >
-            M e n u
-          </h5>
-        </Link>
-
-        <Link to="Contact" smooth={true} duration={100}>
-          <h5
-            className={`menu-main logoFontSmall flex-fill ms-5 ${
-              colorMenu === "text-danger" ? "text-danger" : ""
-            }`}
-            onClick={handleColorDanger}
-          >
-            B o o k i n g
-          </h5>
-        </Link>
-      </div>
-    </>
+    <div className="fixed-top">
+      <Row className="p-3">
+        <Col className="text-center">
+          <Link to="WelcomePage" smooth={true} duration={100}>
+            <h5
+              className={`menu-main logoFontSmall ${
+                colorMenu === "text-danger" ? "text-danger" : ""
+              }`}
+              onClick={handleColorWhite}
+            >
+              Welcome
+            </h5>
+          </Link>
+        </Col>
+        <Col className="text-center">
+          <Link to="MainMenuProducts" smooth={true} duration={100}>
+            <h5
+              className={`menu-main logoFontSmall ${
+                colorMenu === "text-danger" ? "text-danger" : ""
+              }`}
+              onClick={handleColorDanger}
+            >
+              Menu
+            </h5>
+          </Link>
+        </Col>
+        <Col className="text-center">
+          <Link to="Place" smooth={true} duration={100}>
+            <h5
+              className={`menu-main logoFontSmall ${
+                colorMenu === "text-danger" ? "text-danger" : ""
+              }`}
+              onClick={handleColorWhite}
+            >
+              Place
+            </h5>
+          </Link>
+        </Col>
+        <Col className="text-center">
+          <Link to="Contact" smooth={true} duration={100}>
+            <h5
+              className={`menu-main logoFontSmall ${
+                colorMenu === "text-danger" ? "text-danger" : ""
+              }`}
+              onClick={handleColorDanger}
+            >
+              Reservation
+            </h5>
+          </Link>
+        </Col>
+      </Row>
+    </div>
   );
 }
 
