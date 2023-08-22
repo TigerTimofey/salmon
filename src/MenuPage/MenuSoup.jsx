@@ -49,7 +49,11 @@ function MenuSoup({
         </Row>
       </Container>
 
-      <img src="./Soup/friedRamen.png" className=" image-height " alt="ramen" />
+      <img
+        src="./Soup/friedRamen.png"
+        className=" image-height "
+        alt="friedRamen"
+      />
       <Container>
         <Row>
           <Col>
