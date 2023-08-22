@@ -50,7 +50,7 @@ function MenuSoup({
       </Container>
 
       <img
-        src="./Soup/friedRamen.png"
+        src="./Soup/friedramen.png"
         className=" image-height "
         alt="friedRamen"
       />
