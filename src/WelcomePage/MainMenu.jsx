@@ -16,7 +16,7 @@ function MainMenu() {
     <div className="fixed-top">
       <Row className="p-3">
         <Col className="text-center">
-          <Link to="WelcomePage" smooth={true} duration={100}>
+          <Link to="WelcomePage">
             <h5
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""
@@ -28,7 +28,7 @@ function MainMenu() {
           </Link>
         </Col>
         <Col className="text-center">
-          <Link to="MainMenuProducts" smooth={true} duration={100}>
+          <Link to="MainMenuProducts">
             <h5
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""
@@ -40,7 +40,7 @@ function MainMenu() {
           </Link>
         </Col>
         <Col className="text-center">
-          <Link to="Place" smooth={true} duration={100}>
+          <Link to="Place">
             <h5
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""
@@ -52,7 +52,7 @@ function MainMenu() {
           </Link>
         </Col>
         <Col className="text-center">
-          <Link to="Contact" smooth={true} duration={100}>
+          <Link to="Contact">
             <h5
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""
