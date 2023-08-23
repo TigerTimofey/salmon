@@ -13,9 +13,9 @@ function MainMenu() {
   };
 
   return (
-    <div className="fixed-top">
+    <div className="fixed-top phone-menu-hidden">
       <Row className="p-3">
-        <Col className="text-center">
+        <Col xs={3} className="text-center">
           <Link to="WelcomePage" smooth={true} duration={100}>
             <h5
               className={`menu-main logoFontSmall ${
@@ -23,11 +23,11 @@ function MainMenu() {
               }`}
               onClick={handleColorWhite}
             >
-              Welcome
+              Main
             </h5>
           </Link>
         </Col>
-        <Col className="text-center">
+        <Col xs={3} className="text-center">
           <Link to="MainMenuProducts" smooth={true} duration={100}>
             <h5
               className={`menu-main logoFontSmall ${
@@ -39,7 +39,7 @@ function MainMenu() {
             </h5>
           </Link>
         </Col>
-        <Col className="text-center">
+        <Col xs={3} className="text-center">
           <Link to="Place" smooth={true} duration={100}>
             <h5
               className={`menu-main logoFontSmall ${
@@ -51,7 +51,7 @@ function MainMenu() {
             </h5>
           </Link>
         </Col>
-        <Col className="text-center">
+        <Col xs={3} className="text-center">
           <Link to="Contact" smooth={true} duration={100}>
             <h5
               className={`menu-main logoFontSmall ${
@@ -59,7 +59,7 @@ function MainMenu() {
               }`}
               onClick={handleColorDanger}
             >
-              Reservation
+              Booking
             </h5>
           </Link>
         </Col>

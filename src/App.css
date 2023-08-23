@@ -235,27 +235,31 @@ body {
 
 @media (max-width: 551px) {
   body {
-    overflow: visible;
+    overflow: hidden;
+    overflow-y: scroll;
   }
-  .phone-menu {
+  .phone-menu-hidden {
+    visibility: hidden;
+  }
+  /* .phone-menu {
     margin-right: 0;
     margin-left: 0;
-  }
+  } */
 
   .logoFont {
-    font-size: 20px; /* Adjust font size for smaller screens */
+    font-size: 20px;
   }
 
   .logoFontMedium {
-    font-size: 14px; /* Adjust font size for medium text */
+    font-size: 14px;
   }
 
   .logoFontSmall {
-    font-size: 17px; /* Adjust font size for small text */
+    font-size: 17px;
   }
 
   .App-header {
-    font-size: 18px; /* Adjust font size for the main header */
+    font-size: 18px;
   }
 }
 
