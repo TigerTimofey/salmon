@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 function MainMenu() {
   const [colorMenu, setColorMenu] = useState("text-white");
@@ -16,27 +16,19 @@ function MainMenu() {
     <div className="fixed-top">
       <Row className="p-3">
         <Col className="text-center">
-          <Link to="WelcomePage">
-            {/* <h5
-              className={`menu-main logoFontSmall ${
-                colorMenu === "text-danger" ? "text-danger" : ""
-              }`}
-              onClick={handleColorWhite}
-            > */}
-            <Button
+          <Link to="WelcomePage" smooth={true} duration={100}>
+            <h5
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""
               }`}
               onClick={handleColorWhite}
             >
-              {" "}
               Welcome
-            </Button>
-            {/* </h5> */}
+            </h5>
           </Link>
         </Col>
         <Col className="text-center">
-          <Link to="MainMenuProducts">
+          <Link to="MainMenuProducts" smooth={true} duration={100}>
             <h5
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""
@@ -48,28 +40,19 @@ function MainMenu() {
           </Link>
         </Col>
         <Col className="text-center">
-          <Link to="Place">
-            {/* <h5
+          <Link to="Place" smooth={true} duration={100}>
+            <h5
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""
               }`}
               onClick={handleColorWhite}
             >
               Place
-            </h5> */}
-            <Button
-              className={`menu-main logoFontSmall ${
-                colorMenu === "text-danger" ? "text-danger" : ""
-              }`}
-              onClick={handleColorWhite}
-            >
-              {" "}
-              Place
-            </Button>
+            </h5>
           </Link>
         </Col>
         <Col className="text-center">
-          <Link to="Contact">
+          <Link to="Contact" smooth={true} duration={100}>
             <h5
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""

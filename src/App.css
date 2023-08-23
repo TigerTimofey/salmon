@@ -234,6 +234,11 @@ body {
 /* mobile */
 
 @media (max-width: 551px) {
+  .body {
+    body {
+      overflow: visible;
+    }
+  }
   .phone-menu {
     margin-right: 0;
     margin-left: 0;
