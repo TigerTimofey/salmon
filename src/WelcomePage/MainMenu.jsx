@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 
 function MainMenu() {
   const [colorMenu, setColorMenu] = useState("text-white");
@@ -17,14 +17,22 @@ function MainMenu() {
       <Row className="p-3">
         <Col className="text-center">
           <Link to="WelcomePage">
-            <h5
+            {/* <h5
+              className={`menu-main logoFontSmall ${
+                colorMenu === "text-danger" ? "text-danger" : ""
+              }`}
+              onClick={handleColorWhite}
+            > */}
+            <Button
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""
               }`}
               onClick={handleColorWhite}
             >
+              {" "}
               Welcome
-            </h5>
+            </Button>
+            {/* </h5> */}
           </Link>
         </Col>
         <Col className="text-center">
@@ -41,14 +49,23 @@ function MainMenu() {
         </Col>
         <Col className="text-center">
           <Link to="Place">
-            <h5
+            {/* <h5
               className={`menu-main logoFontSmall ${
                 colorMenu === "text-danger" ? "text-danger" : ""
               }`}
               onClick={handleColorWhite}
             >
               Place
-            </h5>
+            </h5> */}
+            <Button
+              className={`menu-main logoFontSmall ${
+                colorMenu === "text-danger" ? "text-danger" : ""
+              }`}
+              onClick={handleColorWhite}
+            >
+              {" "}
+              Place
+            </Button>
           </Link>
         </Col>
         <Col className="text-center">
