@@ -234,10 +234,8 @@ body {
 /* mobile */
 
 @media (max-width: 551px) {
-  .body {
-    body {
-      overflow: visible;
-    }
+  body {
+    overflow: visible;
   }
   .phone-menu {
     margin-right: 0;
@@ -260,6 +258,7 @@ body {
     font-size: 18px; /* Adjust font size for the main header */
   }
 }
+
 @media (max-width: 675px) {
   .image-height {
     height: 150px;
