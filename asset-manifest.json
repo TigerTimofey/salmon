@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/soul-mall/static/css/main.1e889ea5.css",
-    "main.js": "/soul-mall/static/js/main.f33fc861.js",
+    "main.css": "/soul-mall/static/css/main.994fbf87.css",
+    "main.js": "/soul-mall/static/js/main.960af85c.js",
     "static/media/Rowdies-Bold.ttf": "/soul-mall/static/media/Rowdies-Bold.e5afa6906cd6858d6509.ttf",
     "index.html": "/soul-mall/index.html",
-    "main.1e889ea5.css.map": "/soul-mall/static/css/main.1e889ea5.css.map",
-    "main.f33fc861.js.map": "/soul-mall/static/js/main.f33fc861.js.map"
+    "main.994fbf87.css.map": "/soul-mall/static/css/main.994fbf87.css.map",
+    "main.960af85c.js.map": "/soul-mall/static/js/main.960af85c.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e889ea5.css",
-    "static/js/main.f33fc861.js"
+    "static/css/main.994fbf87.css",
+    "static/js/main.960af85c.js"
   ]
 }
