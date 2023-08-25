@@ -23,6 +23,7 @@ import {
   deliveryFee,
   deliveryFeePrice,
 } from "../../ConstantsMenu";
+import { Button } from "react-bootstrap";
 
 function TakeAway({
   selectedOption,
@@ -163,56 +164,77 @@ function TakeAway({
           <Col>
             <Form.Group className="mb-3 text-center" controlId="floatingInput">
               {/* <Form.Label className="ms-2 ">Order</Form.Label> */}
-              <Form.Control
-                as="textarea"
-                rows={10}
-                name="info"
-                value={formData.info}
-                onChange={handleInputChange}
-                placeholder={
-                  (addMenu === null || addMenu === 0) && addMenuSalmonSet === 0
-                    ? ""
-                    : `
-                    Order Details
+              {/* {addMenu === null || (addMenu === 0 && addMenuSalmonSet === 0) */}
+              {addMenu > 0 ||
+              addMenuSalmonSet > 0 ||
+              addMenuHoso > 0 ||
+              addMenuPhila > 0 ||
+              addMenuRamen > 0 ||
+              addMenuFried > 0 ? (
+                <Form.Control
+                  as="textarea"
+                  rows={10}
+                  name="info"
+                  value={formData.info}
+                  onChange={handleInputChange}
+                  placeholder={
+                    (addMenu === null || addMenu === 0) &&
+                    addMenuSalmonSet === 0
+                      ? ""
+                      : `
+Order Details
 
-  ${
-    addMenu !== null && addMenu !== 0
-      ? `${salmon} ${addMenu} tk. - ${salmonPrice * addMenu} $`
-      : ""
-  }
-  ${
-    addMenuSalmonSet !== "" && addMenuSalmonSet > 0
-      ? `${salmonSet} ${addMenuSalmonSet} tk. - ${
-          salmonSetPrice * addMenuSalmonSet
-        } $`
-      : ""
-  }
-  ${
-    addMenuHoso !== "" && addMenuHoso > 0
-      ? `${hoso} ${addMenuHoso} tk. - ${hosoPrice * addMenuHoso} $`
-      : ""
-  }
-  ${
-    addMenuPhila !== "" && addMenuPhila > 0
-      ? `${phila} ${addMenuPhila} tk. - ${philaPrice * addMenuPhila} $`
-      : ""
-  }
-  ${
-    addMenuRamen !== "" && addMenuRamen > 0
-      ? `${ramen} ${addMenuRamen} tk. - ${ramenPrice * addMenuRamen} $`
-      : ""
-  }
-  ${
-    addMenuFried !== "" && addMenuFried > 0
-      ? `${friedRamen}  ${addMenuFried} tk. - ${
-          friedRamenPrice * addMenuFried
-        } $`
-      : ""
-  }
-  `
-                }
-                readOnly
-              />
+
+${
+  addMenu !== null && addMenu !== 0
+    ? `${salmon} ${addMenu} tk. - ${salmonPrice * addMenu} $`
+    : ""
+}
+${
+  addMenuSalmonSet !== "" && addMenuSalmonSet > 0
+    ? `${salmonSet} ${addMenuSalmonSet} tk. - ${
+        salmonSetPrice * addMenuSalmonSet
+      } $`
+    : ""
+}
+${
+  addMenuHoso !== "" && addMenuHoso > 0
+    ? `${hoso} ${addMenuHoso} tk. - ${hosoPrice * addMenuHoso} $`
+    : ""
+}
+${
+  addMenuPhila !== "" && addMenuPhila > 0
+    ? `${phila} ${addMenuPhila} tk. - ${philaPrice * addMenuPhila} $`
+    : ""
+}
+${
+  addMenuRamen !== "" && addMenuRamen > 0
+    ? `${ramen} ${addMenuRamen} tk. - ${ramenPrice * addMenuRamen} $`
+    : ""
+}
+${
+  addMenuFried !== "" && addMenuFried > 0
+    ? `${friedRamen}  ${addMenuFried} tk. - ${friedRamenPrice * addMenuFried} $`
+    : ""
+}
+`
+                  }
+                  readOnly
+                />
+              ) : (
+                <Container className="d-flex">
+                  <Row>
+                    <Col xs={12}>
+                      {" "}
+                      <img src="./cart.png" alt="cart" />
+                    </Col>
+                    <Col>
+                      {" "}
+                      <Button>BACK TO MENU</Button>
+                    </Col>
+                  </Row>
+                </Container>
+              )}
             </Form.Group>
           </Col>
 

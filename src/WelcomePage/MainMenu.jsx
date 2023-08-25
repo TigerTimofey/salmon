@@ -47,7 +47,7 @@ function MainMenu() {
               }`}
               onClick={handleColorWhite}
             >
-              Place
+              Feedback
             </h5>
           </Link>
         </Col>

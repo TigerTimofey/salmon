@@ -11,6 +11,9 @@
   display: flex;
   justify-content: center;
 }
+.react-calendar__month-view__weekdays {
+  padding: 2px;
+}
 
 .react-calendar {
   width: 400px;

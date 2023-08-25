@@ -230,21 +230,56 @@ body {
   margin-right: -15px;
   margin-left: -15px;
 }
+.card-special {
+  scale: 0.9;
+  transition: scale 0.8s ease-in-out;
+}
+.card-special:hover {
+  scale: 1.2;
+  transition: scale 0.5s ease-in-out;
+  padding: 0px;
+}
+.card-title,
+.card-text {
+  transition: font-size 1s ease-in-out, justify-content 1s ease-in-out;
+}
 
-/* mobile */
+.card-special:hover .card-title {
+  font-size: 15px;
+  transition: font-size 1s ease-in-out, justify-content 1s ease-in-out;
+}
 
+.card-special:hover .card-text {
+  font-size: 16px;
+  transition: 1s all ease;
+}
+
+.card-image {
+  width: 50%;
+  transition: 1s all ease;
+}
+.card-special:hover .card-image {
+  width: 35%;
+  transition: 1s all ease;
+}
 @media (max-width: 551px) {
+  .card-special:hover .card-title {
+    font-size: 14px;
+    transition: 1s all ease;
+  }
+  .card-special:hover .card-text {
+    font-size: 15px;
+    transition: 1s all ease;
+  }
   body {
-    overflow: hidden;
+    overflow: auto;
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   .phone-menu-hidden {
     visibility: hidden;
   }
-  /* .phone-menu {
-    margin-right: 0;
-    margin-left: 0;
-  } */
 
   .logoFont {
     font-size: 20px;
