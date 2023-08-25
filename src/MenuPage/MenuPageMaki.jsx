@@ -17,7 +17,7 @@ function MenuPageMaki({
   handleMinusPhila,
 }) {
   return (
-    <div className=" appersCenter menu-item-1">
+    <div className=" appersCenter menu-item-1 noCursor">
       <h2 className="logoFontSmall">Maki</h2>
 
       <img src="./RollImages/hoso.png" className="image-height" alt="tuna" />

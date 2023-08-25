@@ -44,7 +44,7 @@ function MainMenuProducts({
     <div className="App App-header-white logoFontSmall">
       <Container>
         <Row xs={12}>
-          <p className="logoFontMedium  ">M E N U</p>{" "}
+          <p className="logoFontMedium noCursor ">M E N U</p>{" "}
           <Row className="phone-menu logoFontSmall">
             <Col xs={4} md={4}>
               <MenuPageNigiri

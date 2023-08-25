@@ -24,7 +24,7 @@ function MenuPageNigiri({
   handleMinusAddSalmonSet,
 }) {
   return (
-    <div className=" appersCenter menu-item-1">
+    <div className=" appersCenter menu-item-1 noCursor">
       <h2 className="logoFontSmall">Nigiri</h2>
 
       <img

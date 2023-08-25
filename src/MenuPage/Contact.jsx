@@ -27,7 +27,7 @@ function Contact({
         className="App-logo p- height-order"
         alt="logo"
       />{" "}
-      <h2 className="logoFont pb-5 mb-5">Place an Order </h2>
+      <h2 className="logoFont pb-5 mb-5 noCursor">Place an Order </h2>
       <Form>
         <Form.Select
           size="sm"

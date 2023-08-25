@@ -228,6 +228,9 @@ body {
 .vh-booking {
   min-height: 80vh;
 }
+.noCursor {
+  cursor: default;
+}
 
 .phone-menu {
   flex-wrap: wrap;

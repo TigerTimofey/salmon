@@ -124,7 +124,7 @@ function WelcomePage() {
         <div className={"App App-header"}>
           <MainMenu />
 
-          <p className="logoFont p-3">
+          <p className="logoFont p-3 noCursor">
             Hello{" "}
             <Badge pill bg="danger" text="light">
               Salmon
