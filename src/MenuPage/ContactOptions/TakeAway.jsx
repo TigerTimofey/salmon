@@ -1,12 +1,15 @@
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
-
+import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import { Link } from "react-scroll";
+
 import OrderModal from "./OrderModal";
+
 import {
   salmon,
   salmonSet,
@@ -23,7 +26,6 @@ import {
   deliveryFee,
   deliveryFeePrice,
 } from "../../ConstantsMenu";
-import { Button } from "react-bootstrap";
 
 function TakeAway({
   selectedOption,
@@ -225,12 +227,22 @@ ${
                 <Container className="d-flex">
                   <Row>
                     <Col xs={12}>
-                      {" "}
-                      <img src="./cart.png" alt="cart" />
+                      <p>Cart is empty</p>
                     </Col>
+                    <Col xs={12}>
+                      {" "}
+                      <img
+                        src="./cart.png"
+                        alt="cart"
+                        className="image-height-booking"
+                      />
+                    </Col>
+                    <br />
                     <Col>
                       {" "}
-                      <Button>BACK TO MENU</Button>
+                      <Link to="MainMenuProducts" smooth={true} duration={100}>
+                        <Button>Go to menu</Button>
+                      </Link>
                     </Col>
                   </Row>
                 </Container>

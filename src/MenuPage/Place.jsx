@@ -3,8 +3,8 @@ import Feedback from "./ContactOptions/PlaceOptions/Feedback";
 function Place() {
   return (
     <>
-      <div className="App App-header logoFontSmall">
-        Feedback <br />
+      <div className="App App-header logoFontMedium">
+        F e e d b a c k <br />
         <br />
         <Feedback />
       </div>

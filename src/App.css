@@ -203,16 +203,20 @@ body {
   height: 200px;
   transition: height 0.1s ease;
 }
+.image-height-booking {
+  height: 140px;
+}
 
 .menu-main {
   /* top: 0;
   right: 50%;
      : 50%;
   opacity: 0.6; */
+  font-size: 1.5rem;
   color: white;
-  transition: opacity 0.1s ease, color 0.3s ease;
+  transition: opacity 0.4s ease, color 0.4s ease;
   padding: 6px;
-  outline: 1px solid #dc3545;
+  /* outline: 1px solid #dc3545; */
 }
 
 .menu-main:hover {
@@ -285,9 +289,9 @@ body {
     font-size: 20px;
   }
 
-  .logoFontMedium {
+  /* .logoFontMedium {
     font-size: 14px;
-  }
+  } */
 
   .logoFontSmall {
     font-size: 17px;
@@ -300,7 +304,25 @@ body {
 
 @media (max-width: 675px) {
   .image-height {
-    height: 150px;
+    height: 110px;
+  }
+  .image-height-booking {
+    height: 120px;
+  }
+}
+
+@media (max-width: 845px) {
+  body {
+    overflow: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .phone-menu-hidden {
+    visibility: hidden;
+  }
+  .image-height {
+    height: 130px;
   }
 }
 
