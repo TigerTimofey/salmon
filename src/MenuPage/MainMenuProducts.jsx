@@ -10,33 +10,21 @@ import MenuSoup from "./MenuSoup";
 import Cart from "./Cart/Cart";
 
 function MainMenuProducts({
-  addMenu,
-  showMinus,
   handleAdd,
   handleMinusAdd,
   //
   handleAddSalmonSet,
-  showMinusSalmonSet,
-  addMenuSalmonSet,
   handleMinusAddSalmonSet,
-  //
-  addMenuHoso,
-  showMinusHoso,
+
   handleAddHoso,
   handleMinusHoso,
-  //
-  addMenuPhila,
-  showMinusPhila,
+
   handleAddPhila,
   handleMinusPhila,
-  //
-  addMenuRamen,
-  showMinusRamen,
+
   handleAddRamen,
   handleMinusRamen,
-  //
-  addMenuFried,
-  showMinusFried,
+
   handleAddFried,
   handleMinusFried,
 }) {
@@ -48,13 +36,8 @@ function MainMenuProducts({
           <Row className="phone-menu logoFontSmall">
             <Col xs={4} md={4}>
               <MenuPageNigiri
-                addMenu={addMenu}
-                showMinus={showMinus}
                 handleAdd={handleAdd}
                 handleMinusAdd={handleMinusAdd}
-                //
-                addMenuSalmonSet={addMenuSalmonSet}
-                showMinusSalmonSet={showMinusSalmonSet}
                 handleAddSalmonSet={handleAddSalmonSet}
                 handleMinusAddSalmonSet={handleMinusAddSalmonSet}
                 //
@@ -63,26 +46,18 @@ function MainMenuProducts({
 
             <Col xs={4} md={4}>
               <MenuPageMaki
-                addMenuHoso={addMenuHoso}
-                showMinusHoso={showMinusHoso}
                 handleAddHoso={handleAddHoso}
                 handleMinusHoso={handleMinusHoso}
-                //
-                addMenuPhila={addMenuPhila}
-                showMinusPhila={showMinusPhila}
+                // //
+
                 handleAddPhila={handleAddPhila}
                 handleMinusPhila={handleMinusPhila}
               />
             </Col>
             <Col xs={4} md={4}>
               <MenuSoup
-                addMenuRamen={addMenuRamen}
-                showMinusRamen={showMinusRamen}
                 handleAddRamen={handleAddRamen}
                 handleMinusRamen={handleMinusRamen}
-                //
-                addMenuFried={addMenuFried}
-                showMinusFried={showMinusFried}
                 handleAddFried={handleAddFried}
                 handleMinusFried={handleMinusFried}
               />

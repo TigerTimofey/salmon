@@ -1,10 +1,9 @@
-import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Badge from "react-bootstrap/Badge";
 import Success from "./Success";
 import { useDispatch, useSelector } from "react-redux";
-import { setShowModal } from "../../Services/stateService";
+import { setShowModal, setShowSuccess } from "../../Services/stateService";
 
 function OrderModal({
   formData,
@@ -14,22 +13,18 @@ function OrderModal({
   AdditionalInfoOrder,
 }) {
   const showModal = useSelector((state) => state.showModal);
+  const showSuccess = useSelector((state) => state.showSuccess);
   const dispatch = useDispatch();
-
-  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleModalOpen = () => dispatch(setShowModal(true));
   const handleModalClose = () => dispatch(setShowModal(false));
-  // const [showModal, setShowModal] = useState(false);
-  // const handleModalOpen = () => setShowModal(true);
-  // const handleModalClose = () => setShowModal(false);
 
   const handleModalSubmit = () => {
     // Here you can use the formData to perform any actions, e.g., sending the data to a server
     console.log(formData);
     handleModalClose();
     showSuccess && <Success />;
-    setShowSuccess(true);
+    dispatch(setShowSuccess(true));
   };
 
   return (

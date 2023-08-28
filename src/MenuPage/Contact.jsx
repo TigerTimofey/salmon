@@ -3,14 +3,7 @@ import Form from "react-bootstrap/Form";
 import BookTable from "./ContactOptions/BookTable";
 import TakeAway from "./ContactOptions/TakeAway";
 
-function Contact({
-  addMenu,
-  addMenuSalmonSet,
-  addMenuHoso,
-  addMenuPhila,
-  addMenuRamen,
-  addMenuFried,
-}) {
+function Contact() {
   const selectOptions = ["Take away", "Book a table"];
   const [selectedOption, setSelectedOption] = useState("");
   const selectedRef = useRef(null);
@@ -51,13 +44,6 @@ function Contact({
           )}
           {selectedOption === "Take away" && (
             <TakeAway
-              addMenu={addMenu}
-              addMenuSalmonSet={addMenuSalmonSet}
-              addMenuHoso={addMenuHoso}
-              addMenuPhila={addMenuPhila}
-              addMenuRamen={addMenuRamen}
-              addMenuFried={addMenuFried}
-              //
               selectedOption={selectedOption}
               setSelectedOption={setSelectedOption}
             />

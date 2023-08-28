@@ -12,17 +12,20 @@ import {
   currency,
 } from "../ConstantsMenu";
 
+import { useSelector } from "react-redux";
+
 function MenuPageNigiri({
-  addMenu,
-  showMinus,
   handleAdd,
   handleMinusAdd,
-  //
-  addMenuSalmonSet,
-  showMinusSalmonSet,
+
   handleAddSalmonSet,
   handleMinusAddSalmonSet,
 }) {
+  const addMenu = useSelector((state) => state.addMenu);
+  const addMenuSalmonSet = useSelector((state) => state.addMenuSalmonSet);
+  const showMinus = useSelector((state) => state.showMinus);
+  const showMinusSalmonSet = useSelector((state) => state.showMinusSalmonSet);
+
   return (
     <div className=" appersCenter menu-item-1 noCursor">
       <h2 className="logoFontSmall">Nigiri</h2>

@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -12,16 +13,16 @@ import {
   currency,
 } from "../ConstantsMenu";
 function MenuSoup({
-  addMenuRamen,
-  showMinusRamen,
   handleAddRamen,
   handleMinusRamen,
-  //
-  addMenuFried,
-  showMinusFried,
+
   handleAddFried,
   handleMinusFried,
 }) {
+  const addMenuRamen = useSelector((state) => state.addMenuRamen);
+  const addMenuFried = useSelector((state) => state.addMenuFried);
+  const showMinusRamen = useSelector((state) => state.showMinusRamen);
+  const showMinusFried = useSelector((state) => state.showMinusFried);
   return (
     <div className=" appersCenter menu-item-1 noCursor">
       <h2 className="logoFontSmall">Soup</h2>

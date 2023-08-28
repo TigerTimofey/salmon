@@ -27,16 +27,16 @@ import {
   deliveryFeePrice,
 } from "../../ConstantsMenu";
 
-function TakeAway({
-  selectedOption,
-  setSelectedOption,
-  addMenu,
-  addMenuSalmonSet,
-  addMenuHoso,
-  addMenuPhila,
-  addMenuRamen,
-  addMenuFried,
-}) {
+import { useSelector } from "react-redux";
+
+function TakeAway({ selectedOption, setSelectedOption }) {
+  const addMenu = useSelector((state) => state.addMenu);
+  const addMenuSalmonSet = useSelector((state) => state.addMenuSalmonSet);
+  const addMenuHoso = useSelector((state) => state.addMenuHoso);
+  const addMenuPhila = useSelector((state) => state.addMenuPhila);
+  const addMenuRamen = useSelector((state) => state.addMenuRamen);
+  const addMenuFried = useSelector((state) => state.addMenuFried);
+
   const [formData, setFormData] = useState({
     selectedOption: selectedOption,
     name: "",

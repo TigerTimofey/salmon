@@ -1,4 +1,5 @@
-import { useEffect, useState, useRef } from "react";
+// import { useEffect, useState, useRef } from "react";
+import { useSelector } from "react-redux";
 import Badge from "react-bootstrap/Badge";
 
 import MainMenu from "./MainMenu";
@@ -7,136 +8,144 @@ import MainMenuProducts from "../MenuPage/MainMenuProducts";
 import Place from "../MenuPage/Place";
 
 import { useDispatch } from "react-redux";
-import { setIsButtonCartVisible } from "../Services/stateService";
+import {
+  setIsButtonCartVisible,
+  setAddMenu,
+  setAddMenuSalmonSet,
+  setAddMenuHoso,
+  setAddMenuPhila,
+  setAddMenuRamen,
+  setAddMenuFried,
+  setShowMinus,
+  setShowMinusSalmonSet,
+  setShowMinusHoso,
+  setShowMinusPhila,
+  setShowMinusRamen,
+  setShowMinusFried,
+} from "../Services/stateService";
 
-import lottie from "lottie-web";
+// import lottie from "lottie-web";
 
 function WelcomePage() {
-  const container = useRef(null);
-  useEffect(() => {
-    lottie.loadAnimation({
-      container: container.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: require("../MenuPage/data.json"),
-    });
-  }, []);
+  // const container = useRef(null);
+
+  // useEffect(() => {
+  //   lottie.loadAnimation({
+  //     container: container.current,
+  //     renderer: "svg",
+  //     loop: true,
+  //     autoplay: true,
+  //     animationData: require("../MenuPage/data.json"),
+  //   });
+  // }, []);
 
   const dispatch = useDispatch();
   const handleButtonClick = () => dispatch(setIsButtonCartVisible(true));
 
-  const [addMenu, setAddMenu] = useState(null);
-  const [addMenuSalmonSet, setAddMenuSalmonSet] = useState(null);
-  const [addMenuHoso, setAddMenuHoso] = useState(null);
-  const [addMenuPhila, setAddMenuPhila] = useState(null);
-  const [addMenuRamen, setAddMenuRamen] = useState(null);
-  const [addMenuFried, setAddMenuFried] = useState(null);
-
-  const [showMinus, setShowMinus] = useState(false);
-  const [showMinusSalmonSet, setShowMinusSalmonSet] = useState(false);
-  const [showMinusHoso, setShowMinusHoso] = useState(false);
-  const [showMinusPhila, setShowMinusPhila] = useState(false);
-  const [showMinusRamen, setShowMinusRamen] = useState(false);
-  const [showMinusFried, setShowMinusFried] = useState(false);
+  const addMenu = useSelector((state) => state.addMenu);
+  const addMenuSalmonSet = useSelector((state) => state.addMenuSalmonSet);
+  const addMenuHoso = useSelector((state) => state.addMenuHoso);
+  const addMenuPhila = useSelector((state) => state.addMenuPhila);
+  const addMenuRamen = useSelector((state) => state.addMenuRamen);
+  const addMenuFried = useSelector((state) => state.addMenuFried);
 
   //Salmon
   const handleAdd = () => {
-    setAddMenu(addMenu + 1);
+    dispatch(setAddMenu(addMenu + 1));
     setShowMinus(true);
     handleButtonClick();
   };
   const handleMinusAdd = () => {
-    setAddMenu(addMenu - 1);
+    dispatch(setAddMenu(addMenu - 1));
     if (addMenu < 1) {
-      setAddMenu(0);
+      dispatch(setAddMenu(0));
     }
     if (addMenu < 2) {
-      setShowMinus(false);
+      dispatch(setShowMinus(false));
     }
   };
   //Salmon Set
   const handleAddSalmonSet = () => {
-    setAddMenuSalmonSet(addMenuSalmonSet + 1);
-    setShowMinusSalmonSet(true);
+    dispatch(setAddMenuSalmonSet(addMenuSalmonSet + 1));
+    dispatch(setShowMinusSalmonSet(true));
     handleButtonClick();
   };
   const handleMinusAddSalmonSet = () => {
-    setAddMenuSalmonSet(addMenuSalmonSet - 1);
+    dispatch(setAddMenuSalmonSet(addMenuSalmonSet - 1));
     if (addMenuSalmonSet < 1) {
-      setAddMenuSalmonSet(addMenuSalmonSet - 1);
+      dispatch(setAddMenuSalmonSet(addMenuSalmonSet - 1));
     }
     if (addMenuSalmonSet < 2) {
-      setShowMinusSalmonSet(false);
+      dispatch(setShowMinusSalmonSet(false));
     }
   };
   //Hoso
   const handleAddHoso = () => {
-    setAddMenuHoso(addMenuHoso + 1);
-    setShowMinusHoso(true);
+    dispatch(setAddMenuHoso(addMenuHoso + 1));
+    dispatch(setShowMinusHoso(true));
     handleButtonClick();
   };
   const handleMinusHoso = () => {
-    setAddMenuHoso(addMenuHoso - 1);
+    dispatch(setAddMenuHoso(addMenuHoso - 1));
     if (addMenuHoso < 1) {
-      setAddMenuHoso(addMenuHoso - 1);
+      dispatch(setAddMenuHoso(addMenuHoso - 1));
     }
     if (addMenuHoso < 2) {
-      setShowMinusHoso(false);
+      dispatch(setShowMinusHoso(false));
     }
   };
   //Phila
   const handleAddPhila = () => {
-    setAddMenuPhila(addMenuPhila + 1);
-    setShowMinusPhila(true);
+    dispatch(setAddMenuPhila(addMenuPhila + 1));
+    dispatch(setShowMinusPhila(true));
     handleButtonClick();
   };
   const handleMinusPhila = () => {
-    setAddMenuPhila(addMenuPhila - 1);
+    dispatch(setAddMenuPhila(addMenuPhila - 1));
     if (addMenuPhila < 1) {
-      setAddMenuPhila(addMenuPhila - 1);
+      dispatch(setAddMenuPhila(addMenuPhila - 1));
     }
     if (addMenuPhila < 2) {
-      setShowMinusPhila(false);
+      dispatch(setShowMinusPhila(false));
     }
   };
   //Ramen
   const handleAddRamen = () => {
-    setAddMenuRamen(addMenuRamen + 1);
-    setShowMinusRamen(true);
+    dispatch(setAddMenuRamen(addMenuRamen + 1));
+    dispatch(setShowMinusRamen(true));
     handleButtonClick();
   };
   const handleMinusRamen = () => {
-    setAddMenuRamen(addMenuRamen - 1);
+    dispatch(setAddMenuRamen(addMenuRamen - 1));
     if (addMenuRamen < 1) {
-      setAddMenuRamen(addMenuRamen - 1);
+      dispatch(setAddMenuRamen(addMenuRamen - 1));
     }
     if (addMenuRamen < 2) {
-      setShowMinusRamen(false);
+      dispatch(setShowMinusRamen(false));
     }
   };
   //Fried
   const handleAddFried = () => {
-    setAddMenuFried(addMenuFried + 1);
-    setShowMinusFried(true);
+    dispatch(setAddMenuFried(addMenuFried + 1));
+    dispatch(setShowMinusFried(true));
     handleButtonClick();
   };
   const handleMinusFried = () => {
-    setAddMenuFried(addMenuFried - 1);
+    dispatch(setAddMenuFried(addMenuFried - 1));
     if (addMenuPhila < 1) {
-      setAddMenuFried(addMenuFried - 1);
+      dispatch(setAddMenuFried(addMenuFried - 1));
     }
     if (addMenuPhila < 2) {
-      setShowMinusFried(false);
+      dispatch(setShowMinusFried(false));
     }
   };
 
   return (
     <>
       <div id="WelcomePage">
-        <div className={"App App-header"}>
+        <div className="App App-header">
           <MainMenu />
-          <div className="scroll-animation " ref={container}></div>
+          {/* <div className="scroll-animation " ref={container}></div> */}
           <p className="logoFont p-3 noCursor center-content">
             Hello{" "}
             <Badge pill bg="danger" text="light">
@@ -150,33 +159,16 @@ function WelcomePage() {
 
       <div id="MainMenuProducts">
         <MainMenuProducts
-          addMenu={addMenu}
-          showMinus={showMinus}
           handleAdd={handleAdd}
           handleMinusAdd={handleMinusAdd}
-          //
-          addMenuSalmonSet={addMenuSalmonSet}
-          showMinusSalmonSet={showMinusSalmonSet}
           handleAddSalmonSet={handleAddSalmonSet}
           handleMinusAddSalmonSet={handleMinusAddSalmonSet}
-          //
-          addMenuHoso={addMenuHoso}
-          showMinusHoso={showMinusHoso}
           handleAddHoso={handleAddHoso}
           handleMinusHoso={handleMinusHoso}
-          //
-          addMenuPhila={addMenuPhila}
-          showMinusPhila={showMinusPhila}
           handleAddPhila={handleAddPhila}
           handleMinusPhila={handleMinusPhila}
-          //
-          addMenuRamen={addMenuRamen}
-          showMinusRamen={showMinusRamen}
           handleAddRamen={handleAddRamen}
           handleMinusRamen={handleMinusRamen}
-          //
-          addMenuFried={addMenuFried}
-          showMinusFried={showMinusFried}
           handleAddFried={handleAddFried}
           handleMinusFried={handleMinusFried}
         />
@@ -186,14 +178,7 @@ function WelcomePage() {
       </div>
 
       <div id="Contact">
-        <Contact
-          addMenu={addMenu}
-          addMenuSalmonSet={addMenuSalmonSet}
-          addMenuHoso={addMenuHoso}
-          addMenuPhila={addMenuPhila}
-          addMenuRamen={addMenuRamen}
-          addMenuFried={addMenuFried}
-        />
+        <Contact />
       </div>
     </>
   );

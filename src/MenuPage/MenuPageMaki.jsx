@@ -4,18 +4,21 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { hoso, phila, hosoPrice, philaPrice, currency } from "../ConstantsMenu";
+import { useSelector } from "react-redux";
 
 function MenuPageMaki({
-  addMenuHoso,
-  showMinusHoso,
   handleAddHoso,
   handleMinusHoso,
-  //
-  addMenuPhila,
-  showMinusPhila,
+
   handleAddPhila,
   handleMinusPhila,
 }) {
+  const addMenuHoso = useSelector((state) => state.addMenuHoso);
+  const addMenuPhila = useSelector((state) => state.addMenuPhila);
+
+  const showMinusHoso = useSelector((state) => state.showMinusHoso);
+  const showMinusPhila = useSelector((state) => state.showMinusPhila);
+
   return (
     <div className=" appersCenter menu-item-1 noCursor">
       <h2 className="logoFontSmall">Maki</h2>
