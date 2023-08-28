@@ -234,7 +234,13 @@ body {
   transition: 1s all ease;
 }
 
-@media (max-width: 551px) {
+@media (min-width: 0px) and (max-width: 900px) {
+  body {
+    overflow: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
   .card-special:hover .card-title {
     font-size: 14px;
     transition: 1s all ease;
@@ -251,10 +257,6 @@ body {
   .logoFont {
     font-size: 20px;
   }
-
-  /* .logoFontMedium {
-    font-size: 14px;
-  } */
 
   .logoFontSmall {
     font-size: 17px;
@@ -274,13 +276,13 @@ body {
   }
 }
 
-@media (min-width: 550px) {
-  /* body {
+@media (min-width: 895px) and (max-width: 1200px) {
+  body {
     overflow: auto;
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-  } */
+  }
 
   .phone-menu-hidden {
     visibility: hidden;
@@ -290,11 +292,12 @@ body {
     height: 130px;
   }
 }
-@media (min-width: 900px) {
+
+/* @media (min-width: 1200px) {
   .phone-menu-hidden {
     visibility: visible;
   }
-}
+} */
 
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "react-calendar/dist/Calendar.css";
