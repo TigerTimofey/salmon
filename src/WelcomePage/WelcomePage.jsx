@@ -1,4 +1,3 @@
-// import { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import Badge from "react-bootstrap/Badge";
 
@@ -52,7 +51,7 @@ function WelcomePage() {
   //Salmon
   const handleAdd = () => {
     dispatch(setAddMenu(addMenu + 1));
-    setShowMinus(true);
+    dispatch(setShowMinus(true));
     handleButtonClick();
   };
   const handleMinusAdd = () => {
@@ -145,11 +144,11 @@ function WelcomePage() {
       <div id="WelcomePage">
         <div className="App App-header">
           <MainMenu />
-          {/* <div className="scroll-animation " ref={container}></div> */}
-          <p className="logoFont p-3 noCursor center-content">
+
+          <p className="logoFontMedium p-3 noCursor center-content">
             Hello{" "}
             <Badge pill bg="danger" text="light">
-              Salmon
+              SALMON
             </Badge>{" "}
             Lover
           </p>

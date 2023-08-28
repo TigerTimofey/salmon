@@ -12,7 +12,7 @@ function CartBooking() {
       {isButtonCartVisible && (
         <Button
           variant="danger"
-          className="cart-align"
+          className="cart-align "
           onClick={handleButtonClick}
         >
           <img src="cart.png" alt="cart" />

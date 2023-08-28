@@ -12,7 +12,7 @@ import Cart from "./Cart/Cart";
 function MainMenuProducts({
   handleAdd,
   handleMinusAdd,
-  //
+
   handleAddSalmonSet,
   handleMinusAddSalmonSet,
 
