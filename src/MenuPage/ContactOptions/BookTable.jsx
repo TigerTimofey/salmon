@@ -55,10 +55,7 @@ function BookTable({ selectedOption, setSelectedOption }) {
 
             <br />
             <Form.Group className="mt-0" controlId="floatingInput">
-              <FloatingLabel
-                controlId="floatingSelect"
-                label="Additional information"
-              >
+              <FloatingLabel controlId="floatingSelect" label="Additional info">
                 <Form.Control
                   as="textarea"
                   name="info"

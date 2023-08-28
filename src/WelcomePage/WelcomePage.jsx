@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Badge from "react-bootstrap/Badge";
 
 import MainMenu from "./MainMenu";
@@ -9,7 +9,20 @@ import Place from "../MenuPage/Place";
 import { useDispatch } from "react-redux";
 import { setIsButtonCartVisible } from "../Services/stateService";
 
+import lottie from "lottie-web";
+
 function WelcomePage() {
+  const container = useRef(null);
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../MenuPage/data.json"),
+    });
+  }, []);
+
   const dispatch = useDispatch();
   const handleButtonClick = () => dispatch(setIsButtonCartVisible(true));
 
@@ -123,8 +136,8 @@ function WelcomePage() {
       <div id="WelcomePage">
         <div className={"App App-header"}>
           <MainMenu />
-
-          <p className="logoFont p-3 noCursor">
+          <div className="scroll-animation " ref={container}></div>
+          <p className="logoFont p-3 noCursor center-content">
             Hello{" "}
             <Badge pill bg="danger" text="light">
               Salmon
@@ -134,6 +147,7 @@ function WelcomePage() {
           <img src="./sushiLogo.png" className="App-logo p-3" alt="logo" />
         </div>
       </div>
+
       <div id="MainMenuProducts">
         <MainMenuProducts
           addMenu={addMenu}

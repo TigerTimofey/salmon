@@ -23,6 +23,7 @@
 .place-image {
   border-radius: 10px;
 }
+
 .place-bg {
   background-color: #282c34;
   box-shadow: 5px 5px 16px 5px rgba(255, 255, 255, 0.2),
@@ -142,43 +143,6 @@ body {
   font-size: calc(10px + 2vmin);
   animation: appersCenter 5s forwards;
 }
-/* .soup {
-  font-size: calc(10px + 2vmin);
-} */
-
-/* Define the slide-in animation */
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-200%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(50);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(200%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(-100);
-    opacity: 1;
-  }
-}
-@keyframes appersCenter {
-  from {
-    transform: translateX(-200);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(50);
-    opacity: 1;
-  }
-}
 
 .table {
   display: flex;
@@ -191,7 +155,6 @@ body {
   grid-template-columns: 1fr;
 }
 .menu-item-1 {
-  /* align-items: start; */
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -269,6 +232,7 @@ body {
   width: 35%;
   transition: 1s all ease;
 }
+
 @media (max-width: 551px) {
   .card-special:hover .card-title {
     font-size: 14px;
@@ -278,12 +242,12 @@ body {
     font-size: 15px;
     transition: 1s all ease;
   }
-  body {
-    overflow: auto;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
+  /* body { */
+  /* overflow: hidden; */
+  /* overflow-y: scroll; */
+  /* scrollbar-width: none; */
+  /* -ms-overflow-style: none; */
+  /* } */
   .phone-menu-hidden {
     visibility: hidden;
   }
@@ -313,16 +277,30 @@ body {
     height: 120px;
   }
 }
+.scroll-animation {
+  visibility: hidden;
+  /* width: 10%; */
+}
 
 @media (max-width: 845px) {
+  .scroll-animation {
+    visibility: visible;
+    position: sticky;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%;
+  }
   body {
     overflow: auto;
-    overflow-y: scroll;
+    /* overflow-y: scroll;
     scrollbar-width: none;
-    -ms-overflow-style: none;
+    -ms-overflow-style: none; */
   }
   .phone-menu-hidden {
     visibility: hidden;
+    display: flex;
+    max-width: 300px;
   }
   .image-height {
     height: 130px;
