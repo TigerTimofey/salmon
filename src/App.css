@@ -14,6 +14,10 @@
   font-family: "logoFont";
   font-size: 15px;
 }
+.logoFontContact {
+  font-family: "logoFont";
+  font-size: 24px;
+}
 .p-7 {
   padding: 60px;
 }
@@ -54,7 +58,18 @@ body {
 .cart-align img {
   height: 40px;
 }
-
+.map-style {
+  color: white;
+  background: #dc3545;
+  padding: 20px;
+  font-family: logoFont;
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+}
 /* First page */
 .App {
   text-align: center;
@@ -96,10 +111,23 @@ body {
   background-color: #282c34;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+
+  font-family: logoFont;
+  padding: 10px;
+}
+.App-footer a {
+  text-decoration: none;
   color: white;
-  font-family: logoFontSmall;
-  padding-top: 10px;
+  font-size: 12px;
+}
+.App-footer a:hover {
+  text-decoration: underline;
+
+  font-size: 12px;
+}
+.App-footer a i {
+  font-size: 20px;
 }
 .width-menu {
   width: 50vw;
@@ -131,14 +159,6 @@ body {
   padding: 20px;
 }
 
-.text-slide-left {
-  font-size: calc(10px + 2vmin);
-  animation: slideInLeft 5s forwards;
-}
-.text-slide-right {
-  font-size: calc(10px + 2vmin);
-  animation: slideInRight 5s forwards;
-}
 .appersCenter {
   font-size: calc(10px + 2vmin);
   animation: appersCenter 5s forwards;
@@ -241,6 +261,11 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+  .mobile-tablet-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .card-special:hover .card-title {
     font-size: 14px;
     transition: 1s all ease;
@@ -269,7 +294,7 @@ body {
 
 @media (max-width: 675px) {
   .image-height {
-    height: 110px;
+    height: 130px;
   }
   .image-height-booking {
     height: 120px;
@@ -293,12 +318,7 @@ body {
   }
 }
 
-/* @media (min-width: 1200px) {
-  .phone-menu-hidden {
-    visibility: visible;
-  }
-} */
-
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "react-calendar/dist/Calendar.css";
 @import "sweetalert2/dist/sweetalert2.min.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");

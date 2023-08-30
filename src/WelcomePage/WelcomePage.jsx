@@ -4,7 +4,6 @@ import Badge from "react-bootstrap/Badge";
 import MainMenu from "./MainMenu";
 import Contact from "../MenuPage/Contact";
 import MainMenuProducts from "../MenuPage/MainMenuProducts";
-import Place from "../MenuPage/Place";
 
 import { useDispatch } from "react-redux";
 import {
@@ -171,9 +170,6 @@ function WelcomePage() {
           handleAddFried={handleAddFried}
           handleMinusFried={handleMinusFried}
         />
-      </div>
-      <div id="Place">
-        <Place />
       </div>
 
       <div id="Contact">
