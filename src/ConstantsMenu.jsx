@@ -17,13 +17,3 @@ export const friedRamenPrice = 10;
 
 export const deliveryFee = "Delivery charge";
 export const deliveryFeePrice = 2.95;
-
-export const feedBackNameFirst = "Annely";
-export const feedBackNameSecond = "James";
-export const feedBackNameThird = "Timofey";
-export const feedBackNameFourth = "Bruno";
-
-export const feedBackFirst = "Great sushi! We'll definitely should try.";
-export const feedBackSecond = "Best Ramen in the city. I'll come again!";
-export const feedBackThird = "They have every fast and cheap delivery.";
-export const feedBackFourth = "They are so fast and friendly :)";
