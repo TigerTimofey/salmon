@@ -3,6 +3,8 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import trash from "./trash.svg";
+import Stack from "react-bootstrap/Stack";
 
 import {
   salmon,
@@ -45,15 +47,18 @@ function MenuPageNigiri({
               {salmonPrice}
               {currency}
             </Badge>
-
-            <Button variant="light" size="sm" onClick={handleAdd}>
-              Add{addMenu === null ? "" : `ed: ${addMenu}`}{" "}
-            </Button>
-            {showMinus && (
-              <Button variant="light" size="sm" onClick={handleMinusAdd}>
-                <img src="trash.svg" alt="trash" />
-              </Button>
-            )}
+            <Container className="d-flex justify-content-center align-items-center">
+              <Stack direction="horizontal" gap={2} className="stack-no-wrap">
+                <Button variant="light" size="sm" onClick={handleAdd}>
+                  Add{addMenu === null ? "" : `ed: ${addMenu}`}{" "}
+                </Button>
+                {showMinus && (
+                  <Button variant="light" size="sm" onClick={handleMinusAdd}>
+                    <img src="trash.svg" alt="trash" />
+                  </Button>
+                )}
+              </Stack>
+            </Container>
           </Col>
         </Row>
       </Container>
@@ -74,20 +79,25 @@ function MenuPageNigiri({
               {salmonSetPrice}
               {currency}
             </Badge>
-
-            <Button variant="light" size="sm" onClick={handleAddSalmonSet}>
-              Add
-              {addMenuSalmonSet === null ? "" : `ed: ${addMenuSalmonSet}`}{" "}
-            </Button>
-            {showMinusSalmonSet && (
-              <Button
-                variant="light"
-                size="sm"
-                onClick={handleMinusAddSalmonSet}
-              >
-                <img src="trash.svg" alt="trash" />
-              </Button>
-            )}
+            <Container className="d-flex justify-content-center align-items-center">
+              <Stack direction="horizontal" gap={2} className="stack-no-wrap">
+                <Button variant="light" size="sm" onClick={handleAddSalmonSet}>
+                  Add
+                  {addMenuSalmonSet === null
+                    ? ""
+                    : `ed ${addMenuSalmonSet}`}{" "}
+                </Button>
+                {showMinusSalmonSet && (
+                  <Button
+                    variant="light"
+                    size="sm"
+                    onClick={handleMinusAddSalmonSet}
+                  >
+                    <img src="trash.svg" alt="trash" />
+                  </Button>
+                )}
+              </Stack>
+            </Container>
           </Col>
         </Row>
       </Container>

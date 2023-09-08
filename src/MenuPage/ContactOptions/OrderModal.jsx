@@ -11,17 +11,44 @@ function OrderModal({
   selectedDate,
   total,
   AdditionalInfoOrder,
+  timeValue,
 }) {
   const showModal = useSelector((state) => state.showModal);
   const showSuccess = useSelector((state) => state.showSuccess);
+  const addMenu = useSelector((state) => state.addMenu);
+  const addMenuSalmonSet = useSelector((state) => state.addMenuSalmonSet);
+  const addMenuHoso = useSelector((state) => state.addMenuHoso);
+  const addMenuPhila = useSelector((state) => state.addMenuPhila);
+  const addMenuRamen = useSelector((state) => state.addMenuRamen);
+  const addMenuFried = useSelector((state) => state.addMenuFried);
   const dispatch = useDispatch();
 
   const handleModalOpen = () => dispatch(setShowModal(true));
   const handleModalClose = () => dispatch(setShowModal(false));
 
+  const itemsWithQuantity = [
+    { item: "Salmon", quantity: addMenu },
+    { item: "Salmon set", quantity: addMenuSalmonSet },
+    { item: "Hoso", quantity: addMenuHoso },
+    { item: "Phila", quantity: addMenuPhila },
+    { item: "Ramen", quantity: addMenuRamen },
+    { item: "Fried", quantity: addMenuFried },
+  ];
+
+  const filteredItems = itemsWithQuantity.filter((item) => item.quantity >= 1);
+
   const handleModalSubmit = () => {
     // Here you can use the formData to perform any actions, e.g., sending the data to a server
-    console.log(formData);
+
+    const timeValueBooking = () => {
+      if (timeValue) {
+        return timeValue;
+      } else {
+        return filteredItems;
+      }
+    };
+
+    console.log(formData, timeValueBooking());
     handleModalClose();
     showSuccess && <Success />;
     dispatch(setShowSuccess(true));
@@ -46,12 +73,12 @@ function OrderModal({
             <div className="d-grid justify-content-center text-center">
               <p className="text-success m-0 ">Date</p>{" "}
               {selectedDate.toDateString()} <br />
+              <p className="text-success m-0">Time</p>{" "}
+              {timeValue.split(":").slice(0, 2).join(":")} <br />
               <p className="text-success m-0">Name</p>
               {formData.name} <br />
               <p className="text-success m-0">Number of guests</p>{" "}
               {formData.number} <br />
-              <p className="text-success m-0">Additional information</p>{" "}
-              {formData.info} <br />
             </div>
           </Modal.Body>
           <Modal.Footer>
@@ -91,7 +118,7 @@ function OrderModal({
               <p className="text-success m-0 ">Address</p> {formData.address}
               <br />
               <p className="text-success m-0 ">Order</p>
-              {formData.info || AdditionalInfoOrder}
+              {AdditionalInfoOrder}
               <br />
               <p className="text-success m-0">Total Amout</p>{" "}
               <h1>

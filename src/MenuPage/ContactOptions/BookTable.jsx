@@ -7,22 +7,16 @@ import Col from "react-bootstrap/Col";
 
 import OrderModal from "./OrderModal";
 import Calender from "./Calender";
+import TimePicker from "react-time-picker";
 
-function BookTable({ selectedOption, setSelectedOption }) {
+function BookTable({ selectedOption }) {
   const [formData, setFormData] = useState({
     selectedOption: selectedOption,
     name: "",
     number: "",
-    info: "",
+    timeValue: "",
   });
 
-  // const handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [name]: value,
-  //   }));
-  // };
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
@@ -54,6 +48,9 @@ function BookTable({ selectedOption, setSelectedOption }) {
     setSelectedDate(date);
   };
 
+  const initialTime = new Date().toLocaleTimeString("en-US", { hour12: false });
+  const [timeValue, onChange] = useState(initialTime);
+
   return (
     <div>
       <Container>
@@ -79,14 +76,11 @@ function BookTable({ selectedOption, setSelectedOption }) {
 
             <br />
             <Form.Group className="mt-0" controlId="floatingInput">
-              <FloatingLabel controlId="floatingSelect" label="Additional info">
-                <Form.Control
-                  as="textarea"
-                  name="info"
-                  value={formData.info}
-                  onChange={handleInputChange}
-                />
-              </FloatingLabel>
+              <div className="text-center">
+                Select a time{" "}
+                <TimePicker onChange={onChange} value={timeValue} />
+              </div>
+
               <br />
             </Form.Group>
           </Col>{" "}
@@ -104,8 +98,8 @@ function BookTable({ selectedOption, setSelectedOption }) {
         selectedOption={selectedOption}
         formData={formData}
         setFormData={setFormData}
-        setSelectedOption={setSelectedOption}
         selectedDate={selectedDate}
+        timeValue={timeValue}
       />
     </div>
   );

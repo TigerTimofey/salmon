@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Stack from "react-bootstrap/Stack";
 import { hoso, phila, hosoPrice, philaPrice, currency } from "../ConstantsMenu";
 import { useSelector } from "react-redux";
 
@@ -34,15 +35,18 @@ function MenuPageMaki({
               {hosoPrice}
               {currency}
             </Badge>
-
-            <Button variant="light" size="sm" onClick={handleAddHoso}>
-              Add{addMenuHoso === null ? "" : `ed: ${addMenuHoso}`}{" "}
-            </Button>
-            {showMinusHoso && (
-              <Button variant="light" size="sm" onClick={handleMinusHoso}>
-                <img src="trash.svg" alt="trash" />
-              </Button>
-            )}
+            <Container className="d-flex justify-content-center align-items-center">
+              <Stack direction="horizontal" gap={2} className="stack-no-wrap">
+                <Button variant="light" size="sm" onClick={handleAddHoso}>
+                  Add{addMenuHoso === null ? "" : `ed: ${addMenuHoso}`}{" "}
+                </Button>
+                {showMinusHoso && (
+                  <Button variant="light" size="sm" onClick={handleMinusHoso}>
+                    <img src="trash.svg" alt="trash" />
+                  </Button>
+                )}
+              </Stack>
+            </Container>
           </Col>
         </Row>
       </Container>
@@ -58,15 +62,18 @@ function MenuPageMaki({
               {philaPrice}
               {currency}
             </Badge>
-
-            <Button variant="light" size="sm" onClick={handleAddPhila}>
-              Add{addMenuPhila === null ? "" : `ed: ${addMenuPhila}`}{" "}
-            </Button>
-            {showMinusPhila && (
-              <Button variant="light" size="sm" onClick={handleMinusPhila}>
-                <img src="trash.svg" alt="trash" />
-              </Button>
-            )}
+            <Container className="d-flex justify-content-center align-items-center">
+              <Stack direction="horizontal" gap={2} className="stack-no-wrap">
+                <Button variant="light" size="sm" onClick={handleAddPhila}>
+                  Add{addMenuPhila === null ? "" : `ed: ${addMenuPhila}`}{" "}
+                </Button>
+                {showMinusPhila && (
+                  <Button variant="light" size="sm" onClick={handleMinusPhila}>
+                    <img src="trash.svg" alt="trash" />
+                  </Button>
+                )}
+              </Stack>
+            </Container>
           </Col>
         </Row>
       </Container>

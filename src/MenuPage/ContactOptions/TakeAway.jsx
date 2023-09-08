@@ -29,7 +29,7 @@ import {
 
 import { useSelector } from "react-redux";
 
-function TakeAway({ selectedOption, setSelectedOption }) {
+function TakeAway({ selectedOption }) {
   const addMenu = useSelector((state) => state.addMenu);
   const addMenuSalmonSet = useSelector((state) => state.addMenuSalmonSet);
   const addMenuHoso = useSelector((state) => state.addMenuHoso);
@@ -44,14 +44,6 @@ function TakeAway({ selectedOption, setSelectedOption }) {
     address: "",
     info: "",
   });
-
-  // const handleInputChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [name]: value,
-  //   }));
-  // };
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -190,8 +182,6 @@ function TakeAway({ selectedOption, setSelectedOption }) {
           </Col>
           <Col>
             <Form.Group className="mb-3 text-center" controlId="floatingInput">
-              {/* <Form.Label className="ms-2 ">Order</Form.Label> */}
-              {/* {addMenu === null || (addMenu === 0 && addMenuSalmonSet === 0) */}
               {addMenu > 0 ||
               addMenuSalmonSet > 0 ||
               addMenuHoso > 0 ||
@@ -281,7 +271,6 @@ ${
             selectedOption={selectedOption}
             formData={formData}
             setFormData={setFormData}
-            setSelectedOption={setSelectedOption}
           />
         </Row>
       </Container>

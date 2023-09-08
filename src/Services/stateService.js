@@ -18,6 +18,9 @@ const initialState = {
   showMinusPhila: false,
   showMinusRamen: false,
   showMinusFried: false,
+  selectedDate: new Date().toLocaleTimeString("en-US", { hour12: false }),
+
+  // selectedOption: "",
 };
 export const setShowModal = createAction("setShowModal");
 export const setShowSuccess = createAction("setShowSuccess");
@@ -36,6 +39,8 @@ export const setShowMinusHoso = createAction("setShowMinusHoso");
 export const setShowMinusPhila = createAction("setShowMinusPhila");
 export const setShowMinusRamen = createAction("setShowMinusRamen");
 export const setShowMinusFried = createAction("setShowMinusFried");
+export const setSelectedDate = createAction("setSelectedDate");
+// export const setSelectedOption = createAction("setSelectedOption");
 
 const reducer = createReducer(initialState, {
   [setShowModal]: (state, action) => {
@@ -83,6 +88,12 @@ const reducer = createReducer(initialState, {
   },
   [setShowMinusFried]: (state, action) => {
     state.showMinusFried = action.payload;
+  },
+  // [setSelectedOption]: (state, action) => {
+  //   state.selectedOption = action.payload;
+  // },
+  [setSelectedDate]: (state, action) => {
+    state.selectedDate = action.payload;
   },
 });
 

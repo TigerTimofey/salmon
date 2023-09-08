@@ -22,21 +22,7 @@ import {
   setShowMinusFried,
 } from "../Services/stateService";
 
-// import lottie from "lottie-web";
-
 function WelcomePage() {
-  // const container = useRef(null);
-
-  // useEffect(() => {
-  //   lottie.loadAnimation({
-  //     container: container.current,
-  //     renderer: "svg",
-  //     loop: true,
-  //     autoplay: true,
-  //     animationData: require("../MenuPage/data.json"),
-  //   });
-  // }, []);
-
   const dispatch = useDispatch();
   const handleButtonClick = () => dispatch(setIsButtonCartVisible(true));
 
