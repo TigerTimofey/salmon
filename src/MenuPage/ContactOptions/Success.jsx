@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 
 function Success() {
@@ -12,7 +12,7 @@ function Success() {
     });
   }, []);
 
-  return <p className="logoFontSmall text-center">SUCCESS!</p>;
+  return null;
 }
 
 export default Success;

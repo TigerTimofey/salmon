@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 import MenuPageNigiri from "./MenuPageNigiri";
 import MenuPageMaki from "./MenuPageMaki";
 import MenuSoup from "./MenuSoup";
-import Cart from "./Cart/Cart";
+import Cart from "../Cart/Cart";
 
 function MainMenuProducts({
   handleAdd,

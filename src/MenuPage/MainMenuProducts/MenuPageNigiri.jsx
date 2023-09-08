@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import trash from "./trash.svg";
+
 import Stack from "react-bootstrap/Stack";
 
 import {
@@ -12,7 +12,7 @@ import {
   salmonPrice,
   salmonSetPrice,
   currency,
-} from "../ConstantsMenu";
+} from "../../Services/ConstantsMenu";
 
 import { useSelector } from "react-redux";
 

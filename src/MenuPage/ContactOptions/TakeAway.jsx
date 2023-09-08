@@ -25,7 +25,7 @@ import {
   friedRamen,
   deliveryFee,
   deliveryFeePrice,
-} from "../../ConstantsMenu";
+} from "../../Services/ConstantsMenu";
 
 import { useSelector } from "react-redux";
 

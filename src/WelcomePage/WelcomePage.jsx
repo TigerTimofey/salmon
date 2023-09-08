@@ -2,8 +2,8 @@ import { useSelector } from "react-redux";
 import Badge from "react-bootstrap/Badge";
 
 import MainMenu from "./MainMenu";
-import Contact from "../MenuPage/Contact";
-import MainMenuProducts from "../MenuPage/MainMenuProducts";
+import Contact from "../MenuPage/ContactOptions/Contact";
+import MainMenuProducts from "../MenuPage/MainMenuProducts/MainMenuProducts";
 
 import { useDispatch } from "react-redux";
 import {

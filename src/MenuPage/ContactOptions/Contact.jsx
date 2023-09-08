@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import Form from "react-bootstrap/Form";
-import BookTable from "./ContactOptions/BookTable";
-import TakeAway from "./ContactOptions/TakeAway";
+import BookTable from "./BookTable";
+import TakeAway from "./TakeAway";
 
 function Contact() {
   const selectOptions = ["Take away", "Book a table"];

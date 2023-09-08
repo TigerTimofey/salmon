@@ -12,7 +12,7 @@ import {
   ramenPrice,
   friedRamenPrice,
   currency,
-} from "../ConstantsMenu";
+} from "../../Services/ConstantsMenu";
 function MenuSoup({
   handleAddRamen,
   handleMinusRamen,
