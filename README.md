@@ -1,4 +1,4 @@
-# Weather App
+# Sushi restaurant App
 
 ## `About project`
 
