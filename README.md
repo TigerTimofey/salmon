@@ -1,4 +1,4 @@
-# Sushi restaurant App
+# Sushi restaurant website
 
 ## `About project`
 
