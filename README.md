@@ -7,7 +7,7 @@ This website is intended for a restaurant that has a main menu. On the website, 
 ## `Images`
 
 <img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/9bbcc040-9368-475f-96f4-5361c369a2ff" alt="1"  height="240">
-<img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/6346874c-359a-4e5d-b06d-c01ecd55c084" alt="2"  height="240">
+<img src="https://github.com/TigerTimofey/fapla-app/assets/119110538/cb64c708-ab24-413c-81c8-bc09cb4a3da8" alt="2"  height="240">
 <img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/74063b86-4c16-47b6-b12b-0dd13814305b" alt="3"  height="240">
 <img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/11cfcbd0-687d-4b94-be98-e4a1b4ce2926" alt="4"  height="240">
 
