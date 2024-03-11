@@ -2,34 +2,40 @@
 
 ## `About project`
 
-This project represents a complete database of Pokémon, providing the ability to view their abilities, attacks, defenses, and other information. In addition, it offers the capability to determine how strong a selected Pokémon is in the arena.
+This website is intended for a restaurant that has a main menu. On the website, customers can place orders online or make table reservations. All the data that is collected after an order is placed can be further utilized.
 
 ## `Images`
 
-<img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/c0377244-5c38-497e-86b0-a281656d7159" alt="1"  height="240">
-<img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/63a30963-4e0b-4945-8569-9a94a2ff5e9a" alt="2"  height="240">
-<img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/a9cfbbce-caa1-4d3d-b355-a9da09710eed" alt="3"  height="240">
+<img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/9bbcc040-9368-475f-96f4-5361c369a2ff" alt="1"  height="240">
+<img src="https://github.com/TigerTimofey/fapla-app/assets/119110538/cb64c708-ab24-413c-81c8-bc09cb4a3da8" alt="2"  height="240">
+<img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/74063b86-4c16-47b6-b12b-0dd13814305b" alt="3"  height="240">
+<img src="https://github.com/TigerTimofey/soul-mall/assets/119110538/11cfcbd0-687d-4b94-be98-e4a1b4ce2926" alt="4"  height="240">
 
 ## `Functionality`
 
-Simply choose the desired Pokémon from the list, and you will receive all the available information. By clicking the "Battle" button, you will gain access to the arena, where an opponent will be randomly selected for you to battle.
+If a user wishes to place a takeout order, the cart will initially be empty and they will be prompted to navigate to the menu. After adding items, they will instantly appear in the cart, where the final cost will be calculated based on the quantity. In the menu, there is also an option to remove items from the cart. After entering their information, the customer has the opportunity to review a pop-up modal displaying their final bill.
+
+Additionally, the website offers the option to make table reservations. In the table reservation section of the menu, users will be prompted to enter their name (letters only), the number of guests (numbers only), and any additional information. There's also an integrated calendar for selecting the reservation date. After entering their information, the customer can review a pop-up modal displaying the final details, including the reservation information and any associated costs.
+
+For larger screens, navigation between pages is facilitated by clicking on the menu. For tablets and phones, scrolling is available to navigate through the content on the screen.
 
 ## `Versions and used packages`
 
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/roboto": "^5.0.8",
-    "@mui/icons-material": "^5.15.12",
-    "@mui/material": "^5.15.12",
-    "@mui/styled-engine-sc": "^6.0.0-alpha.12",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "animate.css": "^4.1.1",
-    "gh-pages": "^6.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "styled-components": "^6.1.8",
-    "sweetalert2": "^11.10.3",
-    "web-vitals": "^2.1.4"
+@react-google-maps/api version "^2.18.1"\
+@reduxjs/toolkit version "1.9.5"\
+react-redux "8.1.2"\
+react-scroll "1.8.9"\
+web-vitals ^2.1.4"\
+bootstrap version "5.3.1"\
+lottie-web "2.29.4"\
+node-sass version "7.0.3"\
+react version "18.2.0"\
+react-bootstrap version "2.7.2"\
+react-dom version "18.2.0"\
+react-scripts version "5.0.1"
+
+## `How to add your menu`
+
+You can store all your menu items, prices, and currency information in a file named "ConstantMenu.jsx".
+
+You can add menu photos to each individual category in the following files: "MenuPageMaki.jsx", "MenuPageNigiri.jsx", and "MenuPageSoup.jsx".
